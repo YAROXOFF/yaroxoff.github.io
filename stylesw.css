@@ -1,0 +1,162 @@
+/* Общие стили для страницы анонсов */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+  color: #ff6700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Хедер */
+header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ff670033;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* расстояние между текстом и картинкой */
+  text-decoration: none;
+  color: #ff6700;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 15px 0 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #ff670055;
+}
+
+/* Основной блок анонсов */
+.announcements {
+  flex-grow: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Карточка анонса */
+.announcement-item {
+  background: #1b1b1b;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(255, 103, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+}
+.announcement-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Обложка анонса */
+.cover-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 0 6px rgba(255, 103, 0, 0.4);
+}
+
+/* Информация об анонсе */
+.announcement-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+.announcement-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Кнопки для анонса */
+.announcement-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+.announcement-links a {
+  padding: 8px 16px;
+  border: 2px solid #ff6700;
+  border-radius: 50px;
+  color: #ff6700;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.announcement-links a:hover {
+  background-color: #ff6700;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Футер */
+/* Футер прижат к низу */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ff670033;
+  font-size: 1rem;
+  color: #ff6700cc;
+  margin-top: auto; /* важный момент! */
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .announcement-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cover-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    align-self: center;
+  }
+
+  .announcement-links {
+    margin-left: 0;
+    margin-top: 12px;
+    justify-content: flex-start;
+  }
+
+  .announcement-title {
+    font-size: 1.3rem;
+  }
+}
